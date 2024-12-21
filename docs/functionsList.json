@@ -1,0 +1,182 @@
+[
+  {
+    "id": "FUN-001",
+    "category": "投稿管理",
+    "function_name": "投稿内容登録",
+    "description": "SNSへの投稿内容を登録する。",
+    "input": "投稿内容、投稿先SNS、投稿日",
+    "output": "登録完了メッセージ",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-002",
+    "category": "投稿管理",
+    "function_name": "投稿内容編集",
+    "description": "登録済みの投稿内容を編集する。",
+    "input": "投稿ID、編集内容",
+    "output": "編集完了メッセージ",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-003",
+    "category": "投稿管理",
+    "function_name": "投稿内容削除",
+    "description": "登録済みの投稿内容を削除する。",
+    "input": "投稿ID",
+    "output": "削除完了メッセージ",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-004",
+    "category": "SNS管理",
+    "function_name": "SNS追加",
+    "description": "システムに利用するSNSを追加する。",
+    "input": "SNS名、API設定情報",
+    "output": "SNS追加完了メッセージ",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-005",
+    "category": "SNS管理",
+    "function_name": "SNS削除",
+    "description": "システムから利用するSNSを削除する。",
+    "input": "SNS ID",
+    "output": "SNS削除完了メッセージ",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-006",
+    "category": "表示",
+    "function_name": "日ごとの投稿内容一覧表示",
+    "description": "指定日の投稿内容を一覧表示する。",
+    "input": "日付",
+    "output": "投稿内容一覧",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-007",
+    "category": "表示",
+    "function_name": "SNSごとの投稿内容一覧表示",
+    "description": "指定したSNSの投稿内容を一覧表示する。",
+    "input": "SNS ID",
+    "output": "投稿内容一覧",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-008",
+    "category": "検索",
+    "function_name": "投稿内容検索",
+    "description": "キーワードで投稿内容を検索する。",
+    "input": "検索キーワード",
+    "output": "検索結果一覧",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-009",
+    "category": "投稿管理",
+    "function_name": "投稿内容複製",
+    "description": "登録済みの投稿内容を複製する。",
+    "input": "投稿ID",
+    "output": "複製された投稿内容",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-010",
+    "category": "投稿管理",
+    "function_name": "投稿内容プレビュー",
+    "description": "投稿内容をプレビュー表示する。",
+    "input": "投稿ID",
+    "output": "プレビュー表示",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-011",
+    "category": "表示",
+    "function_name": "カレンダー表示",
+    "description": "投稿内容をカレンダー形式で表示する。",
+    "input": "なし",
+    "output": "カレンダー表示",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-012",
+    "category": "SNS管理",
+    "function_name": "SNS一覧表示",
+    "description": "登録済みのSNS一覧を表示する。",
+    "input": "なし",
+    "output": "SNS一覧",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-013",
+    "category": "投稿管理",
+    "function_name": "投稿ステータス管理",
+    "description": "投稿のステータス（未投稿、投稿済など）を管理する。",
+    "input": "投稿ID,ステータス",
+    "output": "ステータス更新完了",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-014",
+    "category": "投稿管理",
+    "function_name": "投稿予約",
+    "description": "投稿日時を指定して予約する。",
+    "input": "投稿ID,投稿日時",
+    "output": "予約完了",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-015",
+    "category": "表示",
+    "function_name": "投稿ステータス別表示",
+    "description": "投稿ステータスで絞り込んで表示する。",
+    "input": "ステータス",
+    "output": "絞り込み後の投稿一覧",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-016",
+    "category": "SNS管理",
+    "function_name": "SNS詳細情報表示",
+    "description": "各SNSの詳細情報を表示する。",
+    "input": "SNS ID",
+    "output": "SNS詳細情報",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-017",
+    "category": "表示",
+    "function_name": "期間指定での投稿内容表示",
+    "description": "指定した期間の投稿内容を表示する。",
+    "input": "開始日,終了日",
+    "output": "期間内の投稿内容一覧",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-018",
+    "category": "投稿管理",
+    "function_name": "投稿内容一括登録",
+    "description": "複数の投稿内容を一括で登録する。",
+    "input": "投稿内容データ(CSV,Excelなど)",
+    "output": "一括登録完了メッセージ",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-019",
+    "category": "投稿管理",
+    "function_name": "投稿内容のエクスポート",
+    "description": "投稿内容を外部ファイルにエクスポートする。",
+    "input": "エクスポート形式",
+    "output": "エクスポートファイル",
+    "user": "マーケティング担当者"
+  },
+  {
+    "id": "FUN-020",
+    "category": "投稿管理",
+    "function_name": "投稿内容のインポート",
+    "description": "外部ファイルから投稿内容をインポートする。",
+    "input": "インポートファイル",
+    "output": "インポート完了メッセージ",
+    "user": "マーケティング担当者"
+  }
+]

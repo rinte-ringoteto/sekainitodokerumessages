@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+/* global.css などに追記 */
+/* .my-calendar を使ってスコープを限定 */
+.my-calendar .react-calendar {
+  background: white;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.my-calendar .react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.my-calendar .react-calendar__navigation button {
+  background: transparent;
+  color: #374151;
+  /* text-gray-700 */
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background 0.2s;
+}
+
+.my-calendar .react-calendar__navigation button:hover {
+  background: #f3f4f6;
+}
+
+.my-calendar .react-calendar__tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* 日付と印を中央揃え */
+  min-height: 2.5rem;
+  /* 必要なら高さを確保し、印が収まるように */
+  padding: 0;
+  text-align: center;
+  border-radius: 0.25rem;
+  transition: background 0.2s;
+  font-size: 0.875rem;
+  /* text-sm */
+}
+
+.my-calendar .react-calendar__tile:hover {
+  background: #f3f4f6;
+}
+
+.my-calendar .react-calendar__tile--active {
+  background: #134E4A;
+  color: white;
+}
+
+.my-calendar .react-calendar__tile--active:hover {
+  background: #134E4A;
+}
+
+.my-calendar .react-calendar__month-view__days__day--neighboringMonth {
+  color: #9ca3af;
+}
+
+.my-calendar .react-calendar {
+  background: white;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.my-calendar .react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.my-calendar .react-calendar__navigation button {
+  background: transparent;
+  color: #374151;
+  /* text-gray-700 */
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background 0.2s;
+}
+
+.my-calendar .react-calendar__navigation button:hover {
+  background: #f3f4f6;
+  /* hover時は薄いグレーで十分 */
+}
+
+.my-calendar .react-calendar__tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* 日付と印を中央揃え */
+  min-height: 2.5rem;
+  /* 必要なら高さを確保し、印が収まるように */
+  padding: 0;
+  text-align: center;
+  border-radius: 0.25rem;
+  transition: background 0.2s;
+  font-size: 0.875rem;
+  /* text-sm */
+}
+
+.my-calendar .react-calendar__tile:hover {
+  background: #f3f4f6;
+  /* ホバー時に軽いハイライト */
+}
+
+.my-calendar .react-calendar__tile--active {
+  background-color: #134E4A !important;
+  color: white !important;
+}
+
+.my-calendar .react-calendar__tile--active:hover {
+  background-color: #134E4A !important;
+  color: white !important;
+}
+
+.my-calendar .react-calendar__month-view__days__day--neighboringMonth {
+  color: #9ca3af;
+  /* text-gray-400 */
+}

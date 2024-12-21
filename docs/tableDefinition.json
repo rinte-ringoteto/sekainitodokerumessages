@@ -1,0 +1,172 @@
+[
+  {
+    "id": "TAB-001",
+    "table": "users",
+    "column": "user_id",
+    "dataType": "UUID",
+    "regulation": "PRIMARY KEY",
+    "defaultValue": "null",
+    "foreignKey": "null",
+    "description": "ユーザーID"
+  },
+  {
+    "id": "TAB-002",
+    "table": "users",
+    "column": "user_name",
+    "dataType": "TEXT",
+    "regulation": "NOT NULL",
+    "defaultValue": "null",
+    "foreignKey": "null",
+    "description": "ユーザー名"
+  },
+  {
+    "id": "TAB-003",
+    "table": "users",
+    "column": "created_at",
+    "dataType": "TIMESTAMP WITH TIME ZONE",
+    "regulation": "NOT NULL",
+    "defaultValue": "null",
+    "foreignKey": "null",
+    "description": "作成日時"
+  },
+  {
+    "id": "TAB-004",
+    "table": "sns_master",
+    "column": "sns_id",
+    "dataType": "UUID",
+    "regulation": "PRIMARY KEY",
+    "defaultValue": "null",
+    "foreignKey": "null",
+    "description": "SNS ID"
+  },
+  {
+    "id": "TAB-005",
+    "table": "sns_master",
+    "column": "sns_name",
+    "dataType": "TEXT",
+    "regulation": "NOT NULL",
+    "defaultValue": "null",
+    "foreignKey": "null",
+    "description": "SNS名"
+  },
+  {
+    "id": "TAB-006",
+    "table": "sns_master",
+    "column": "api_config",
+    "dataType": "JSONB",
+    "regulation": "NOT NULL",
+    "defaultValue": "{\"api_key\": \"\", \"api_secret\": \"\", \"access_token\": \"\"}",
+    "foreignKey": "null",
+    "description": "API設定情報"
+  },
+  {
+    "id": "TAB-007",
+    "table": "posts",
+    "column": "post_id",
+    "dataType": "UUID",
+    "regulation": "PRIMARY KEY",
+    "defaultValue": "null",
+    "foreignKey": "null",
+    "description": "投稿ID"
+  },
+  {
+    "id": "TAB-008",
+    "table": "posts",
+    "column": "user_id",
+    "dataType": "UUID",
+    "regulation": "NOT NULL",
+    "defaultValue": "null",
+    "foreignKey": "users(user_id)",
+    "description": "ユーザーID"
+  },
+  {
+    "id": "TAB-009",
+    "table": "posts",
+    "column": "sns_id",
+    "dataType": "UUID",
+    "regulation": "NOT NULL",
+    "defaultValue": "null",
+    "foreignKey": "sns_master(sns_id)",
+    "description": "SNS ID"
+  },
+  {
+    "id": "TAB-010",
+    "table": "posts",
+    "column": "post_content",
+    "dataType": "TEXT",
+    "regulation": "NOT NULL",
+    "defaultValue": "null",
+    "foreignKey": "null",
+    "description": "投稿内容"
+  },
+  {
+    "id": "TAB-011",
+    "table": "posts",
+    "column": "post_date",
+    "dataType": "TIMESTAMP WITH TIME ZONE",
+    "regulation": "NOT NULL",
+    "defaultValue": "null",
+    "foreignKey": "null",
+    "description": "投稿日時"
+  },
+  {
+    "id": "TAB-012",
+    "table": "posts",
+    "column": "status",
+    "dataType": "TEXT",
+    "regulation": "NOT NULL",
+    "defaultValue": "\"draft\"",
+    "foreignKey": "null",
+    "description": "投稿ステータス"
+  },
+  {
+    "id": "TAB-013",
+    "table": "posts",
+    "column": "created_at",
+    "dataType": "TIMESTAMP WITH TIME ZONE",
+    "regulation": "NOT NULL",
+    "defaultValue": "null",
+    "foreignKey": "null",
+    "description": "作成日時"
+  },
+  {
+    "id": "TAB-014",
+    "table": "post_schedules",
+    "column": "schedule_id",
+    "dataType": "UUID",
+    "regulation": "PRIMARY KEY",
+    "defaultValue": "null",
+    "foreignKey": "null",
+    "description": "スケジュールID"
+  },
+  {
+    "id": "TAB-015",
+    "table": "post_schedules",
+    "column": "post_id",
+    "dataType": "UUID",
+    "regulation": "NOT NULL",
+    "defaultValue": "null",
+    "foreignKey": "posts(post_id)",
+    "description": "投稿ID"
+  },
+  {
+    "id": "TAB-016",
+    "table": "post_schedules",
+    "column": "scheduled_at",
+    "dataType": "TIMESTAMP WITH TIME ZONE",
+    "regulation": "NOT NULL",
+    "defaultValue": "null",
+    "foreignKey": "null",
+    "description": "予約投稿日時"
+  },
+  {
+    "id": "TAB-017",
+    "table": "post_schedules",
+    "column": "created_at",
+    "dataType": "TIMESTAMP WITH TIME ZONE",
+    "regulation": "NOT NULL",
+    "defaultValue": "null",
+    "foreignKey": "null",
+    "description": "作成日時"
+  }
+]

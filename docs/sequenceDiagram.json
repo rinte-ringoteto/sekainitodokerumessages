@@ -1,0 +1,18 @@
+[
+  {
+    "id": "投稿管理",
+    "value": "{\n  \"mermaid\": \"sequenceDiagram\\n    autonumber\\n    User->>Frontend: 投稿内容を入力\\n    Frontend->>Backend: 投稿データを送信\\n    Backend->>DB: 投稿をデータベースに保存\\n    DB-->>Backend: 保存完了\\n    Backend-->>Frontend: 登録完了メッセージ\\n    Frontend-->>User: 完了画面を表示\\n    User->>Frontend: 投稿内容を編集\\n    Frontend->>Backend: 編集データを送信\\n    Backend->>DB: 投稿を更新\\n    DB-->>Backend: 更新完了\\n    Backend-->>Frontend: 編集完了メッセージ\\n    Frontend-->>User: 完了画面を表示\\n    User->>Frontend: 投稿を削除\\n    Frontend->>Backend: 削除リクエスト送信\\n    Backend->>DB: 投稿を削除\\n    DB-->>Backend: 削除完了\\n    Backend-->>Frontend: 削除完了メッセージ\\n    Frontend-->>User: 完了画面を表示\\n    User->>Frontend: 投稿予約を設定\\n    Frontend->>Backend: 予約データを送信\\n    Backend->>DB: 予約情報を保存\\n    DB-->>Backend: 保存完了\\n    Backend-->>Frontend: 予約完了メッセージ\\n    Frontend-->>User: 予約完了画面を表示\"\n}"
+  },
+  {
+    "id": "SNS管理",
+    "value": "{\n  \"mermaid\": \"sequenceDiagram\\n    User->>Frontend: SNS一覧表示をクリック\\n    Frontend->>Backend: SNS一覧データ要求\\n    Backend->>DB: SNSデータ取得クエリ実行\\n    DB->>Backend: SNSデータ返却\\n    Backend->>Frontend: SNS一覧データ送信\\n    Frontend->>User: SNS一覧画面表示\\n    User->>Frontend: SNS追加ボタンクリック\\n    Frontend->>User: SNS追加フォーム表示\\n    User->>Frontend: SNS名とAPI設定入力\\n    Frontend->>Backend: SNS追加リクエスト送信\\n    Backend->>DB: SNSデータ登録\\n    DB->>Backend: 登録完了通知\\n    Backend->>Frontend: 追加完了メッセージ送信\\n    Frontend->>User: 完了メッセージ表示\\n    User->>Frontend: SNS詳細表示クリック\\n    Frontend->>Backend: SNS詳細データ要求\\n    Backend->>DB: SNS詳細取得クエリ実行\\n    DB->>Backend: SNS詳細データ返却\\n    Backend->>Frontend: SNS詳細データ送信\\n    Frontend->>User: SNS詳細画面表示\\n    User->>Frontend: SNS削除ボタンクリック\\n    Frontend->>Backend: SNS削除リクエスト送信\\n    Backend->>DB: SNSデータ削除\\n    DB->>Backend: 削除完了通知\\n    Backend->>Frontend: 削除完了メッセージ送信\\n    Frontend->>User: 完了メッセージ表示\"\n}"
+  },
+  {
+    "id": "表示",
+    "value": "{\n  \"mermaid\": \"sequenceDiagram\\n    actor User\\n    participant Frontend\\n    participant Backend\\n    participant DB\\n\\n    User->>Frontend: 表示形式を選択\\n    alt 日ごとの表示\\n        Frontend->>Backend: 日付を送信\\n        Backend->>DB: 指定日の投稿を検索\\n        DB->>Backend: 投稿データ返却\\n        Backend->>Frontend: 日別投稿一覧を返却\\n    else SNSごとの表示\\n        Frontend->>Backend: SNS IDを送信\\n        Backend->>DB: SNS別投稿を検索\\n        DB->>Backend: 投稿データ返却\\n        Backend->>Frontend: SNS別投稿一覧を返却\\n    else カレンダー表示\\n        Frontend->>Backend: カレンダー表示要求\\n        Backend->>DB: 全投稿データを検索\\n        DB->>Backend: 投稿データ返却\\n        Backend->>Frontend: カレンダー形式で返却\\n    else ステータス別表示\\n        Frontend->>Backend: ステータスを送信\\n        Backend->>DB: ステータス別投稿を検索\\n        DB->>Backend: 投稿データ返却\\n        Backend->>Frontend: ステータス別一覧を返却\\n    else 期間指定表示\\n        Frontend->>Backend: 開始日終了日を送信\\n        Backend->>DB: 期間内投稿を検索\\n        DB->>Backend: 投稿データ返却\\n        Backend->>Frontend: 期間内投稿一覧を返却\\n    end\\n    Frontend->>User: 投稿一覧を表示\"\n}"
+  },
+  {
+    "id": "検索",
+    "value": "{\n  \"mermaid\": \"sequenceDiagram\\n    autonumber\\n    User->>Frontend: 検索キーワードを入力\\n    Frontend->>Backend: 検索キーワードを送信\\n    Backend->>DB: 投稿テーブルを検索\\n    DB-->>Backend: 検索結果を返却\\n    Backend-->>Frontend: 検索結果を返却\\n    Frontend-->>User: 検索結果一覧を表示\\n    User->>Frontend: 検索結果から投稿を選択\\n    Frontend->>Backend: 選択された投稿IDを送信\\n    Backend->>DB: 投稿詳細情報を取得\\n    DB-->>Backend: 投稿詳細を返却\\n    Backend-->>Frontend: 投稿詳細を返却\\n    Frontend-->>User: 投稿詳細を表示\"\n}"
+  }
+]

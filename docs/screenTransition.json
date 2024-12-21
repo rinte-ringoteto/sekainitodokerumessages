@@ -1,0 +1,18 @@
+[
+  {
+    "id": "投稿管理",
+    "value": "{\n    \"mermaid\": \"graph LR\\n    Login[ログイン画面] --> Dashboard[ダッシュボード]\\n    Dashboard --> PostList[投稿一覧画面]\\n    Dashboard --> BulkOpe[一括操作画面]\\n    PostList --> PostCreate[投稿作成画面]\\n    PostList --> PostEdit[投稿編集画面]\\n    PostList --> PostPreview[投稿プレビュー画面]\\n    PostCreate --> PostConfirm[投稿内容確認画面]\\n    PostEdit --> PostConfirm\\n    PostConfirm --> PostComplete[投稿完了画面]\\n    BulkOpe --> BulkImport[一括インポート画面]\\n    BulkOpe --> BulkExport[一括エクスポート画面]\\n    PostList --> StatusManage[ステータス管理画面]\\n    PostList --> Schedule[投稿予約画面]\\n    Schedule --> Calendar[カレンダー画面]\\n    PostCreate --> PostDuplicate[投稿複製画面]\\n    PostDuplicate --> PostConfirm\"\n}"
+  },
+  {
+    "id": "SNS管理",
+    "value": "{\n    \"mermaid\": \"graph LR\\n    Login[ログイン画面] --> SNSList[SNS一覧画面]\\n    SNSList --> SNSAdd[SNS追加画面]\\n    SNSList --> SNSDetail[SNS詳細画面]\\n    SNSDetail --> SNSEdit[SNS編集画面]\\n    SNSDetail --> SNSDelete[SNS削除確認画面]\\n    SNSAdd --> SNSList\\n    SNSEdit --> SNSList\\n    SNSDelete --> SNSList\\n    SNSAdd --> APISettings[API設定画面]\\n    SNSEdit --> APISettings\\n    APISettings --> SNSList\"\n}"
+  },
+  {
+    "id": "表示",
+    "value": "{\n    \"mermaid\": \"graph LR\\n    Login[ログイン画面] --> Dashboard[ダッシュボード]\\n    Dashboard --> Calendar[カレンダー表示画面]\\n    Dashboard --> DailyList[日別投稿一覧画面]\\n    Dashboard --> SNSList[SNS別投稿一覧画面]\\n    Calendar --> PostDetail[投稿詳細画面]\\n    DailyList --> PostDetail\\n    SNSList --> PostDetail\\n    Calendar --> Filter[表示フィルター画面]\\n    Filter --> Calendar\\n    Calendar --> Period[期間指定画面]\\n    Period --> Calendar\\n    PostDetail --> StatusChange[ステータス変更画面]\\n    StatusChange --> PostDetail\\n    Filter --> DailyList\\n    Filter --> SNSList\\n    Period --> DailyList\\n    Period --> SNSList\"\n}"
+  },
+  {
+    "id": "検索",
+    "value": "{\n    \"mermaid\": \"graph LR\\n    TopMenu[トップメニュー] --> SearchList[投稿検索一覧]\\n    SearchList --> SearchForm[投稿検索フォーム]\\n    SearchForm --> SearchResult[検索結果一覧]\\n    SearchResult --> PostDetail[投稿内容詳細]\\n    SearchResult --> SearchForm\\n    PostDetail --> SearchResult\\n    PostDetail --> PostEdit[投稿内容編集]\\n    PostEdit --> PostDetail\"\n}"
+  }
+]

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background circle (ocean) -->
+  <circle cx="100" cy="100" r="80" fill="#1B4F72"/>
+  
+  <!-- Simplified continent shapes -->
+  <path d="M 60 70 Q 80 60 90 70 T 120 65 Q 130 70 140 65 L 130 90 Q 120 95 110 90 T 80 85 Q 70 80 60 70" 
+        fill="#2ECC71" opacity="0.9"/>
+  <path d="M 50 100 Q 60 110 80 105 T 110 110 Q 120 115 130 110 L 140 130 Q 130 140 110 135 T 70 130 Q 55 120 50 100" 
+        fill="#2ECC71" opacity="0.9"/>
+  
+  <!-- Meridian lines -->
+  <path d="M 100 20 C 60 50 60 150 100 180" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <path d="M 100 20 C 140 50 140 150 100 180" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <path d="M 20 100 C 50 60 150 60 180 100" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  <path d="M 20 100 C 50 140 150 140 180 100" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Envelope -->
+  <path d="M 75 85 L 125 85 L 125 115 L 75 115 Z" fill="white" stroke="#1B4F72" stroke-width="2"/>
+  <path d="M 75 85 L 100 100 L 125 85" fill="none" stroke="#1B4F72" stroke-width="2"/>
+  <path d="M 75 115 L 90 103 L 110 103 L 125 115" fill="none" stroke="#1B4F72" stroke-width="1"/>
+</svg>

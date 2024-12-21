@@ -1,0 +1,18 @@
+{
+  "schedule": "未定",
+  "about_project": "マーケティングカレンダー管理システム",
+  "current_system": "なし",
+  "organization": "未定",
+  "scope": [
+    "複数SNSへの投稿内容管理",
+    "SNSの追加・削除",
+    "日ごとの投稿内容確認",
+    "SNSごとの投稿内容確認"
+  ],
+  "direction_of_solution": "SNS投稿内容の一元管理",
+  "user_of_system": [
+    "マーケティング担当者"
+  ],
+  "budget": "未定",
+  "problems": "複数SNSへの投稿内容管理が煩雑"
+}

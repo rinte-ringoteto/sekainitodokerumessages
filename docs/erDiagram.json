@@ -1,0 +1,3 @@
+{
+  "mermaid": "erDiagram\n    users {\n        UUID user_id PK\n        TEXT user_name\n        TIMESTAMP created_at\n    }\n    sns_master {\n        UUID sns_id PK\n        TEXT sns_name\n        JSONB api_config\n    }\n    posts {\n        UUID post_id PK\n        UUID user_id FK\n        UUID sns_id FK\n        TEXT post_content\n        TIMESTAMP post_date\n        TEXT status\n        TIMESTAMP created_at\n    }\n    post_schedules {\n        UUID schedule_id PK\n        UUID post_id FK\n        TIMESTAMP scheduled_at\n        TIMESTAMP created_at\n    }\n    users ||--o{ posts : creates\n    sns_master ||--o{ posts : belongs_to\n    posts ||--o{ post_schedules : has"
+}

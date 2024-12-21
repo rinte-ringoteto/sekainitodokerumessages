@@ -1,0 +1,110 @@
+[
+  {
+    "id": "BAC-001",
+    "category": "認証",
+    "handleName": "ログイン処理",
+    "description": "ユーザー名とパスワードを検証し、認証トークンを発行する。",
+    "handleProcedure": "ユーザーから送信されたユーザー名とパスワードをデータベースと照合し、認証に成功した場合、認証トークンを発行する。失敗した場合はエラーを返す。",
+    "fileName": "auth-login.ts",
+    "relatedScreen": "SCR-001"
+  },
+  {
+    "id": "BAC-002",
+    "category": "投稿管理",
+    "handleName": "投稿内容登録処理",
+    "description": "SNSへの投稿内容をデータベースに登録する。",
+    "handleProcedure": "ユーザーから送信された投稿内容、投稿先SNS、投稿日をデータベースに登録する。登録後、登録完了メッセージを返す。",
+    "fileName": "posts-create.ts",
+    "relatedScreen": "SCR-004"
+  },
+  {
+    "id": "BAC-003",
+    "category": "投稿管理",
+    "handleName": "投稿内容編集処理",
+    "description": "登録済みの投稿内容をデータベースで更新する。",
+    "handleProcedure": "ユーザーから送信された投稿IDと編集内容に基づいて、データベース内の投稿内容を更新する。更新後、編集完了メッセージを返す。",
+    "fileName": "posts-edit.ts",
+    "relatedScreen": "SCR-005"
+  },
+  {
+    "id": "BAC-004",
+    "category": "投稿管理",
+    "handleName": "投稿内容削除処理",
+    "description": "登録済みの投稿内容をデータベースから削除する。",
+    "handleProcedure": "ユーザーから送信された投稿IDに基づいて、データベースから投稿内容を削除する。削除後、削除完了メッセージを返す。",
+    "fileName": "posts-delete.ts",
+    "relatedScreen": "SCR-024"
+  },
+  {
+    "id": "BAC-005",
+    "category": "SNS管理",
+    "handleName": "SNS追加処理",
+    "description": "システムに利用するSNSをデータベースに追加する。",
+    "handleProcedure": "ユーザーから送信されたSNS名とAPI設定情報をデータベースに登録する。登録後、SNS追加完了メッセージを返す。",
+    "fileName": "sns-create.ts",
+    "relatedScreen": "SCR-018"
+  },
+  {
+    "id": "BAC-006",
+    "category": "SNS管理",
+    "handleName": "SNS削除処理",
+    "description": "システムから利用するSNSをデータベースから削除する。",
+    "handleProcedure": "ユーザーから送信されたSNS IDに基づいて、データベースからSNSを削除する。削除後、SNS削除完了メッセージを返す。",
+    "fileName": "sns-delete.ts",
+    "relatedScreen": "SCR-020"
+  },
+  {
+    "id": "BAC-007",
+    "category": "投稿管理",
+    "handleName": "投稿ステータス更新処理",
+    "description": "投稿のステータスをデータベースで更新する。",
+    "handleProcedure": "ユーザーから送信された投稿IDとステータスに基づいて、データベース内の投稿ステータスを更新する。更新後、ステータス更新完了メッセージを返す。",
+    "fileName": "posts-status.ts",
+    "relatedScreen": "SCR-012"
+  },
+  {
+    "id": "BAC-008",
+    "category": "投稿管理",
+    "handleName": "投稿予約処理",
+    "description": "投稿日時をデータベースに登録して予約する。",
+    "handleProcedure": "ユーザーから送信された投稿IDと投稿日時をデータベースに登録し、予約スケジュールを設定する。予約後、予約完了メッセージを返す。",
+    "fileName": "posts-schedule.ts",
+    "relatedScreen": "SCR-013"
+  },
+  {
+    "id": "BAC-009",
+    "category": "投稿管理",
+    "handleName": "投稿内容一括登録処理",
+    "description": "複数の投稿内容を一括でデータベースに登録する。",
+    "handleProcedure": "ユーザーから送信された投稿内容データ（CSV, Excelなど）を解析し、各投稿内容をデータベースに登録する。登録後、一括登録完了メッセージを返す。",
+    "fileName": "posts-bulk-import.ts",
+    "relatedScreen": "SCR-010"
+  },
+  {
+    "id": "BAC-010",
+    "category": "投稿管理",
+    "handleName": "投稿内容エクスポート処理",
+    "description": "投稿内容を外部ファイルにエクスポートする。",
+    "handleProcedure": "データベースから投稿内容を取得し、指定されたエクスポート形式（CSV, Excelなど）でファイルを作成し、ユーザーにダウンロードさせる。",
+    "fileName": "posts-bulk-export.ts",
+    "relatedScreen": "SCR-011"
+  },
+  {
+    "id": "BAC-011",
+    "category": "投稿管理",
+    "handleName": "投稿内容インポート処理",
+    "description": "外部ファイルから投稿内容をインポートする。",
+    "handleProcedure": "ユーザーから送信されたインポートファイルを解析し、投稿内容をデータベースに登録する。登録後、インポート完了メッセージを返す。",
+    "fileName": "posts-bulk-import.ts",
+    "relatedScreen": "SCR-010"
+  },
+  {
+    "id": "BAC-012",
+    "category": "SNS管理",
+    "handleName": "SNS API設定処理",
+    "description": "SNSのAPI設定情報をデータベースに保存する。",
+    "handleProcedure": "ユーザーから送信されたSNS IDとAPI設定情報をデータベースで更新する。更新後、保存完了メッセージを返す。",
+    "fileName": "sns-apiSetting.ts",
+    "relatedScreen": "SCR-021"
+  }
+]
