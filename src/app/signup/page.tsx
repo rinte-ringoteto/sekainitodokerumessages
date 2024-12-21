@@ -24,7 +24,7 @@ export default function SignupPage() {
 
         // サインアップ成功時の処理
         // ここではログインページにリダイレクトする例を示します。
-        router.push('/login');
+        router.push('/');
     };
 
     return (

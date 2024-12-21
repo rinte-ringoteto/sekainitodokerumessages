@@ -17,7 +17,7 @@ export default function LoginPage() {
             setError(error.message);
         } else {
             // ログイン成功後にダッシュボードへ移動
-            router.push('/dashboard');
+            router.push('/');
         }
     };
 
