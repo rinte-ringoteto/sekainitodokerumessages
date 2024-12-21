@@ -26,7 +26,7 @@ export default function LoginPage() {
         const { data, error } = await supabase.auth.signInWithOAuth({
             provider: 'google',
             options: {
-                redirectTo: `${window.location.origin}` // Googleログイン成功後のリダイレクト先
+                redirectTo: `https://sekainitodokerumessages-jv97m27iq-rinteringotetos-projects.vercel.app/` // Googleログイン成功後のリダイレクト先
             }
         });
         if (error) {
