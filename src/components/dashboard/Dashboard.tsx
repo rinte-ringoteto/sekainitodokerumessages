@@ -79,7 +79,7 @@ export function Dashboard() {
           {/* 左側: Posts */}
           <h2 className="text-2xl font-bold">SNS</h2>
 
-          {/* 右側: ボタン2つ */}
+          {/* 右側:  */}
           <div className="flex items-center space-x-2">
             <button
               type="button"
